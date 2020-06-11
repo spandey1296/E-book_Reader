@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cccexamstudy.pdf_book">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Study9Activity" />
+        <activity android:name=".Study8Activity" />
+        <activity android:name=".Study7Activity" />
+        <activity android:name=".Study6Activity" />
+        <activity android:name=".Study5Activity" />
+        <activity android:name=".Study4Activity" />
+        <activity android:name=".Study3Activity" />
+        <activity android:name=".Study2Activity" />
+        <activity android:name=".Study1Activity" />
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
