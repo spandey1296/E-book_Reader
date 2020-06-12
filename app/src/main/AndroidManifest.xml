@@ -10,15 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"></activity>
-        <activity android:name=".Study9Activity" />
-        <activity android:name=".Study8Activity" />
-        <activity android:name=".Study7Activity" />
-        <activity android:name=".Study6Activity" />
-        <activity android:name=".Study5Activity" />
-        <activity android:name=".Study4Activity" />
-        <activity android:name=".Study3Activity" />
-        <activity android:name=".Study2Activity" />
-        <activity android:name=".Study1Activity" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
