@@ -1,9 +1,9 @@
 package com.cccexamstudy.pdf_book;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import static java.lang.Thread.sleep;
 
@@ -18,7 +18,7 @@ public class Splash extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    sleep(5000);
+                    sleep(500);
 
                     Intent it= new Intent(Splash.this,MainActivity.class);
                     startActivity(it);
