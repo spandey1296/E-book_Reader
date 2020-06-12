@@ -9,6 +9,8 @@ import static java.lang.Thread.sleep;
 
 public class Splash extends AppCompatActivity {
 
+    private static final int SPLASH_TIME_OUT = 5000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,18 +20,15 @@ public class Splash extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    sleep(500);
+                    sleep(SPLASH_TIME_OUT);
 
                     Intent it= new Intent(Splash.this,MainActivity.class);
                     startActivity(it);
-
-
 
                 }
                 catch (InterruptedException e){
                     e.printStackTrace();
                 }
-
             }
         });
 
