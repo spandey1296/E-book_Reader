@@ -1,123 +1,41 @@
 package com.cccexamstudy.pdf_book;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.cccexamstudy.pdf_book.model.StudyFile;
+import com.cccexamstudy.pdf_book.util.StudyListAdapter;
+import com.cccexamstudy.pdf_book.util.StudyProperties;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button study1,study2,study3,study4,study5,study6,study7,study8,study9;
+    private RecyclerView studyListRecyclerView;
 
+    private StudyProperties properties;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        studyListRecyclerView = findViewById(R.id.studyListRecyclerView);
+        studyListRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        study1 = (Button) findViewById(R.id.study1);
-        study1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Study1Activity.class);
-                startActivity(intent);
+        // load all available study properties
+        properties = new StudyProperties(this);
+        List<StudyFile> studyFiles = new ArrayList<>();
+        for (String key : properties.getPropertyNames())
+            studyFiles.add(new StudyFile(key, properties.getProperty(key)));
 
-            }
-        });
-
-        study2 = (Button) findViewById(R.id.study2);
-        study2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Study2Activity.class);
-                startActivity(intent);
-
-            }
-        });
-
-
-        study3 = (Button) findViewById(R.id.study3);
-        study3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Study3Activity.class);
-                startActivity(intent);
-
-            }
-        });
-
-        study4 = (Button) findViewById(R.id.study4);
-        study4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Study4Activity.class);
-                startActivity(intent);
-
-            }
-        });
-
-        study5 = (Button) findViewById(R.id.study5);
-        study5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Study5Activity.class);
-                startActivity(intent);
-
-            }
-        });
-
-
-
-
-        study6 = (Button) findViewById(R.id.study6);
-        study6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Study6Activity.class);
-                startActivity(intent);
-
-            }
-        });
-
-
-        study7 = (Button) findViewById(R.id.study7);
-        study7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Study7Activity.class);
-                startActivity(intent);
-
-            }
-        });
-
-
-        study8 = (Button) findViewById(R.id.study8);
-        study8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Study8Activity.class);
-                startActivity(intent);
-
-            }
-        });
-
-        study9= (Button) findViewById(R.id.study9);
-        study9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Study9Activity.class);
-                startActivity(intent);
-
-            }
-        });
-
-
-
-
-
+        // create adapter with study files
+        StudyListAdapter adapter = new StudyListAdapter(MainActivity.this, studyFiles);
+        studyListRecyclerView.setAdapter(adapter);
 
     }
 }

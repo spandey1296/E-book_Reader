@@ -1,13 +1,15 @@
 package com.cccexamstudy.pdf_book;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import static java.lang.Thread.sleep;
 
 public class Splash extends AppCompatActivity {
+
+    private static final int SPLASH_TIME_OUT = 5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,18 +20,15 @@ public class Splash extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    sleep(5000);
+                    sleep(SPLASH_TIME_OUT);
 
                     Intent it= new Intent(Splash.this,MainActivity.class);
                     startActivity(it);
-
-
 
                 }
                 catch (InterruptedException e){
                     e.printStackTrace();
                 }
-
             }
         });
 

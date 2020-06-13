@@ -1,143 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-   <Button
-    android:id="@+id/study1"
-    android:layout_width="330dp"
-    android:layout_height="wrap_content"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentEnd="true"
-    android:layout_marginStart="40dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginEnd="40dp"
-    android:text="Study 1"
-    android:textStyle="bold"
-    android:textColor="@android:color/white"
-    android:background="@drawable/rounded_corner"/>
-
-
-   <Button
-       android:id="@+id/study2"
-       android:layout_width="330dp"
-       android:layout_height="wrap_content"
-       android:layout_alignParentStart="true"
-       android:layout_alignParentEnd="true"
-       android:layout_marginStart="40dp"
-       android:layout_marginTop="80dp"
-       android:layout_marginEnd="40dp"
-       android:text="Study 2"
-       android:textStyle="bold"
-       android:textColor="@android:color/white"
-       android:background="@drawable/rounded_corner"/>
-
-   <Button
-       android:id="@+id/study3"
-       android:layout_width="330dp"
-       android:layout_height="wrap_content"
-       android:layout_alignParentStart="true"
-       android:layout_alignParentEnd="true"
-       android:layout_marginStart="40dp"
-       android:layout_marginTop="140dp"
-       android:layout_marginEnd="40dp"
-       android:text="Study 3"
-       android:textStyle="bold"
-       android:textColor="@android:color/white"
-       android:background="@drawable/rounded_corner"/>
-
-   <Button
-       android:id="@+id/study4"
-       android:layout_width="330dp"
-       android:layout_height="wrap_content"
-       android:layout_alignParentStart="true"
-       android:layout_alignParentEnd="true"
-       android:layout_marginStart="40dp"
-       android:layout_marginTop="200dp"
-       android:layout_marginEnd="40dp"
-       android:text="Study 4"
-       android:textStyle="bold"
-       android:textColor="@android:color/white"
-       android:background="@drawable/rounded_corner"/>
-
-
-   <Button
-       android:id="@+id/study5"
-       android:layout_width="330dp"
-       android:layout_height="wrap_content"
-       android:layout_alignParentStart="true"
-       android:layout_alignParentEnd="true"
-       android:layout_marginStart="40dp"
-       android:layout_marginTop="260dp"
-       android:layout_marginEnd="40dp"
-       android:text="Study 5"
-       android:textStyle="bold"
-       android:textColor="@android:color/white"
-       android:background="@drawable/rounded_corner"/>
-
-
-   <Button
-       android:id="@+id/study6"
-       android:layout_width="330dp"
-       android:layout_height="wrap_content"
-       android:layout_alignParentStart="true"
-       android:layout_alignParentEnd="true"
-       android:layout_marginStart="40dp"
-       android:layout_marginTop="330dp"
-       android:layout_marginEnd="40dp"
-       android:text="Study 6"
-       android:textStyle="bold"
-       android:textColor="@android:color/white"
-       android:background="@drawable/rounded_corner"/>
-
-
-   <Button
-       android:id="@+id/study7"
-       android:layout_width="330dp"
-       android:layout_height="wrap_content"
-       android:layout_alignParentStart="true"
-       android:layout_alignParentEnd="true"
-       android:layout_marginStart="40dp"
-       android:layout_marginTop="390dp"
-       android:layout_marginEnd="40dp"
-       android:text="Study 7"
-       android:textStyle="bold"
-       android:textColor="@android:color/white"
-       android:background="@drawable/rounded_corner"/>
-
-   <Button
-       android:id="@+id/study8"
-       android:layout_width="330dp"
-       android:layout_height="wrap_content"
-       android:layout_alignParentStart="true"
-       android:layout_alignParentEnd="true"
-       android:layout_marginStart="40dp"
-       android:layout_marginTop="450dp"
-       android:layout_marginEnd="40dp"
-       android:text="Study 8"
-       android:textStyle="bold"
-       android:textColor="@android:color/white"
-       android:background="@drawable/rounded_corner"/>
-
-   <Button
-       android:id="@+id/study9"
-       android:layout_width="330dp"
-       android:layout_height="wrap_content"
-       android:layout_alignParentStart="true"
-       android:layout_alignParentEnd="true"
-       android:layout_marginStart="40dp"
-       android:layout_marginTop="510dp"
-       android:layout_marginEnd="40dp"
-       android:text=" Study 9"
-       android:textStyle="bold"
-       android:textColor="@android:color/white"
-       android:background="@drawable/rounded_corner"/>
-
-
-
-
-
-</RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/studyListRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
